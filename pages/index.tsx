@@ -11,26 +11,38 @@ import CarouselComponent from "@/components/carousel";
 
 export default function IndexPage() {
 	return (
-			<section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
-				<div className="inline-block max-w-3xl mt-8 text-center justify-center">
-					<h1 className={title({ color: "violet" })} style={{fontFamily: "ValorantFont"}}>INFO VALORANT&nbsp;</h1>
-					<br />
-					<h1 className={title()}>
-						Sitio web donde puedes ver información de valorant.
-					</h1>
-					<h4 className={subtitle({ class: "mt-4" })}>
-						La información fue obtenida de <Link isExternal className="text-md" href="https://dash.valorant-api.com/" color="secondary" style={{fontFamily: "ValorantFont"}}>Valorant-API.com</Link>,
-						por ello mantenemos sus políticas que puede ver en la sección <Link isExternal className="text-md" href="https://dash.valorant-api.com/about" color="secondary" style={{fontFamily: "ValorantFont"}}>Acerca de nosotros</Link>.
-					</h4>
-					<h4 className={subtitle({ class: "mt-4" })}>
-						Importante mencionar que el sitio es con fines académicos para demostrar conocimientos como programador, no para lucrar ni perjudicar de ninguna manera a Riot Games.
-					</h4>
+		<section className="flex flex-col items-center justify-center gap-4">
+
+
+			<div className="video-background relative">
+				<video autoPlay muted loop className="inset-0 object-cover z-20 opacity-30" style={{marginTop: "-30px"}}>
+					{/* <source src="/videos/contractglitches.webm" type="video/webm" /> */}
+					<source src="/videos/gekkobg.mp4" type="video/mp4" />
+				</video>
+				<div className="absolute inset-0 flex items-center justify-center">
+					<div className="text-white text-center backdrop-blur-sm p-10">
+						<div className="inline-block max-w-3xl text-center justify-center">
+							<h1 className={title({ color: "violet" })} style={{ fontFamily: "ValorantFont" }}>INFO VALORANT&nbsp;</h1>
+							<br />
+							<h1 className={title()}>
+								Sitio web donde puedes ver información de valorant.
+							</h1>
+							<h4 className={subtitle({ class: "mt-4" })}>
+								La información fue obtenida de <Link isExternal className="text-md" href="https://dash.valorant-api.com/" color="secondary" style={{ fontFamily: "ValorantFont" }}>Valorant-API.com</Link>,
+								por ello mantenemos sus políticas que puede ver en la sección <Link isExternal className="text-md" href="https://dash.valorant-api.com/about" color="secondary" style={{ fontFamily: "ValorantFont" }}>Acerca de nosotros</Link>.
+							</h4>
+							<h4 className={subtitle({ class: "mt-4" })}>
+								Importante mencionar que el sitio es con fines académicos para demostrar conocimientos como programador, no para lucrar ni perjudicar de ninguna manera a Riot Games.
+							</h4>
+						</div>
+
+						<CarouselComponent />
+					</div>
 				</div>
+			</div>
 
-				<CarouselComponent />
 
-
-				{/* <div className="flex gap-3">
+			{/* <div className="flex gap-3">
 					<Link
 						isExternal
 						as={NextLink}
@@ -61,6 +73,6 @@ export default function IndexPage() {
 						</span>
 					</Snippet>
 				</div> */}
-			</section>
+		</section>
 	);
 }
