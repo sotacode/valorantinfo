@@ -1,4 +1,4 @@
-import {nextui} from '@nextui-org/react'
+import { nextui } from '@nextui-org/react'
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -11,6 +11,6 @@ module.exports = {
   theme: {
     extend: {},
   },
-  darkMode: "class",
+  darkMode: "media", // Establece el dark mode como "media" por defecto
   plugins: [nextui()],
 }

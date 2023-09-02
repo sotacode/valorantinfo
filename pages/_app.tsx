@@ -8,9 +8,9 @@ import DefaultLayout from "@/layouts/default";
 export default function App({ Component, pageProps }: AppProps) {
 	return (
 		<NextUIProvider>
-			<NextThemesProvider>
-				<DefaultLayout>
-				<Component {...pageProps}/>
+			<NextThemesProvider >
+				<DefaultLayout >
+					<Component {...pageProps} />
 				</DefaultLayout>
 			</NextThemesProvider>
 		</NextUIProvider>
