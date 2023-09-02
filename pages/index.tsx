@@ -8,14 +8,19 @@ import { title, subtitle } from "@/components/primitives";
 import { GithubIcon } from "@/components/icons";
 import DefaultLayout from "@/layouts/default";
 import CarouselComponent from "@/components/carousel";
+import { useState } from "react";
 
 export default function IndexPage() {
+	const [videoLoaded, setVideoLoaded] = useState(false);
+
+  const handleVideoLoad = () => {
+    setVideoLoaded(true);
+  };
 	return (
 		<section className="flex flex-col items-center justify-center gap-4">
-
-
-			<div className="video-background relative">
-				<video autoPlay muted loop className="inset-0 object-cover z-20 opacity-30" style={{marginTop: "-30px"}}>
+			
+			<div className={`video-background relative ${videoLoaded ? "" : "hidden"}`}>
+				<video autoPlay muted loop className="inset-0 object-cover z-20 opacity-30" style={{marginTop: "-30px"}} onLoadedData={handleVideoLoad}>
 					{/* <source src="/videos/contractglitches.webm" type="video/webm" /> */}
 					<source src="/videos/gekkobg.mp4" type="video/mp4" />
 				</video>
