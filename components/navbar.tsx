@@ -28,6 +28,7 @@ import {
 } from "@/components/icons";
 
 import { Logo } from "@/components/icons";
+import Image from "next/image";
 
 export const Navbar = () => {
 	const searchInput = (
@@ -52,15 +53,82 @@ export const Navbar = () => {
 	);
 
 	return (
-		<NextUINavbar maxWidth="xl" position="sticky">
+		<NextUINavbar
+			classNames={{
+				item: [
+					"flex",
+					"relative",
+					"h-full",
+					"items-center",
+					"data-[active=true]:after:content-['']",
+					"data-[active=true]:after:absolute",
+					"data-[active=true]:after:bottom-0",
+					"data-[active=true]:after:left-0",
+					"data-[active=true]:after:right-0",
+					"data-[active=true]:after:h-[2px]",
+					"data-[active=true]:after:rounded-[2px]",
+					"data-[active=true]:after:bg-secondary",
+				],
+			}}
+			maxWidth="xl" position="sticky">
 			<NavbarContent className="basis-1/5 sm:basis-full" justify="start">
-				<NavbarBrand className="gap-3 max-w-fit">
-					<NextLink className="flex justify-start items-center gap-1" href="/">
-						<Logo />
-						<p className="font-bold text-inherit">ACME</p>
-					</NextLink>
+				<NavbarBrand className="">
+					<Image
+						alt="icon"
+						src="/logovalorant.png"
+						width={50}
+						height={50}
+					/>
+					<p className="font-bold text-inherit">Info Valorant</p>
 				</NavbarBrand>
-				<div className="hidden lg:flex gap-4 justify-start ml-2">
+				<NavbarContent className="hidden sm:flex gap-4" justify="center">
+					<NavbarItem isActive>
+						<Link color="foreground" href="/">
+							INICIO
+						</Link>
+					</NavbarItem>
+					<NavbarItem>
+						<Link color="foreground" href="/agents">
+							AGENTS
+						</Link>
+					</NavbarItem>
+					<NavbarItem>
+						<Link href="/weapons" color="foreground">
+							ARMAS
+						</Link>
+					</NavbarItem>
+					<NavbarItem>
+						<Link href="/maps" color="foreground">
+							MAPAS
+						</Link>
+					</NavbarItem>
+					<NavbarItem>
+						<Link href="/cards" color="foreground">
+							CARTAS
+						</Link>
+					</NavbarItem>
+					<NavbarItem>
+						<Link color="foreground" href="/tiers">
+							TIERS
+						</Link>
+					</NavbarItem>
+					<NavbarItem>
+						<Link color="foreground" href="/about">
+							ACERCA DE
+						</Link>
+					</NavbarItem>
+				</NavbarContent>
+				<NavbarContent justify="end">
+					{/* <NavbarItem className="hidden lg:flex">
+						<Link href="#">Login</Link>
+					</NavbarItem>
+					<NavbarItem>
+						<Button as={Link} color="primary" href="#" variant="flat">
+							Sign Up
+						</Button>
+					</NavbarItem> */}
+				</NavbarContent>
+				{/* <div className="hidden lg:flex gap-4 justify-start ml-2">
 					{siteConfig.navItems.map((item) => (
 						<NavbarItem key={item.href}>
 							<NextLink
@@ -75,10 +143,10 @@ export const Navbar = () => {
 							</NextLink>
 						</NavbarItem>
 					))}
-				</div>
+				</div> */}
 			</NavbarContent>
 
-      <NavbarContent className="hidden sm:flex basis-1/5 sm:basis-full" justify="end">
+			{/* <NavbarContent className="hidden sm:flex basis-1/5 sm:basis-full" justify="end">
 				<NavbarItem className="hidden sm:flex gap-2">
 					<Link isExternal href={siteConfig.links.twitter}>
 						<TwitterIcon className="text-default-500" />
@@ -112,9 +180,9 @@ export const Navbar = () => {
         </Link>
         <ThemeSwitch />
 				<NavbarMenuToggle />
-      </NavbarContent>
+      </NavbarContent> */}
 
-      <NavbarMenu>
+			{/* <NavbarMenu>
 				{searchInput}
 				<div className="mx-4 mt-2 flex flex-col gap-2">
 					{siteConfig.navMenuItems.map((item, index) => (
@@ -135,7 +203,7 @@ export const Navbar = () => {
 						</NavbarMenuItem>
 					))}
 				</div>
-			</NavbarMenu>
+			</NavbarMenu> */}
 		</NextUINavbar>
 	);
 };

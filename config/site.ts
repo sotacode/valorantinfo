@@ -1,8 +1,8 @@
 export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
-	name: "Next.js + NextUI",
-	description: "Make beautiful websites regardless of your design experience.",
+	name: "Info Valorant",
+	description: "Visualización de datos del videojuego VALORANT utilizando Valorant-API (https://dash.valorant-api.com/).",
 	navItems: [
 		{
 			label: "Home",

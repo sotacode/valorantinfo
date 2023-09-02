@@ -1,3 +1,46 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+
+@font-face {
+    font-family: 'ValorantFont';
+    src: url('/fonts/valorant/valorantfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+
+.carousel .thumbs {
+    display: flex;
+    justify-content: center;
+}
+
+
+
+element.style {
+    width: 80px;
+}
+.carousel .thumb.selected, .carousel .thumb:hover {
+    border: 3px solid #b249f8 !important;
+}
+
+.carousel .thumb {
+    border: 1px solid #b249f8 !important;
+}
+
+.carousel .slide img {
+    transition: transform 0.3s;
+}
+
+.carousel.carousel-slider {
+    border-radius: 50px;
+}
+.carousel .carousel-status {
+    display: none;
+}
+
+.fontvalorant {
+    font-family: "valorantFont", sans-serif;
+}

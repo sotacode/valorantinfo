@@ -7,24 +7,30 @@ import { siteConfig } from "@/config/site";
 import { title, subtitle } from "@/components/primitives";
 import { GithubIcon } from "@/components/icons";
 import DefaultLayout from "@/layouts/default";
+import CarouselComponent from "@/components/carousel";
 
 export default function IndexPage() {
 	return (
-		<DefaultLayout>
 			<section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
-				<div className="inline-block max-w-lg text-center justify-center">
-					<h1 className={title()}>Make&nbsp;</h1>
-					<h1 className={title({ color: "violet" })}>beautiful&nbsp;</h1>
+				<div className="inline-block max-w-3xl mt-8 text-center justify-center">
+					<h1 className={title({ color: "violet" })} style={{fontFamily: "ValorantFont"}}>INFO VALORANT&nbsp;</h1>
 					<br />
 					<h1 className={title()}>
-						websites regardless of your design experience.
+						Sitio web donde puedes ver información de valorant.
 					</h1>
 					<h4 className={subtitle({ class: "mt-4" })}>
-						Beautiful, fast and modern React UI library.
+						La información fue obtenida de <Link isExternal className="text-md" href="https://dash.valorant-api.com/" color="secondary" style={{fontFamily: "ValorantFont"}}>Valorant-API.com</Link>,
+						por ello mantenemos sus políticas que puede ver en la sección <Link isExternal className="text-md" href="https://dash.valorant-api.com/about" color="secondary" style={{fontFamily: "ValorantFont"}}>Acerca de nosotros</Link>.
+					</h4>
+					<h4 className={subtitle({ class: "mt-4" })}>
+						Importante mencionar que el sitio es con fines académicos para demostrar conocimientos como programador, no para lucrar ni perjudicar de ninguna manera a Riot Games.
 					</h4>
 				</div>
 
-				<div className="flex gap-3">
+				<CarouselComponent />
+
+
+				{/* <div className="flex gap-3">
 					<Link
 						isExternal
 						as={NextLink}
@@ -54,8 +60,7 @@ export default function IndexPage() {
 							Get started by editing <Code color="primary">pages/index.tsx</Code>
 						</span>
 					</Snippet>
-				</div>
+				</div> */}
 			</section>
-		</DefaultLayout>
 	);
 }
