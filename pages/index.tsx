@@ -25,7 +25,7 @@ export default function IndexPage() {
 					{/* <source src="/videos/contractglitches.webm" type="video/webm" /> */}
 					<source src="/videos/gekkobg.mp4" type="video/mp4" />
 				</video>
-				<div className="absolute inset-0 flex items-center justify-center">
+				<div className="absolute inset-0 flex items-center justify-center mt-28">
 					<div className="text-white text-center backdrop-blur-sm p-10">
 						<div className="inline-block max-w-3xl text-center justify-center">
 							<h1 className={title({ color: "violet" })} style={{ fontFamily: "ValorantFont" }}>INFO VALORANT&nbsp;</h1>
