@@ -9,7 +9,6 @@ import { GithubIcon } from "@/components/icons";
 import DefaultLayout from "@/layouts/default";
 import CarouselComponent from "@/components/carousel";
 import { useState } from "react";
-import { useTheme } from "next-themes";
 
 export default function IndexPage() {
 	const [videoLoaded, setVideoLoaded] = useState(false);
@@ -18,8 +17,6 @@ export default function IndexPage() {
 		setVideoLoaded(true);
 	};
 
-	const { theme, setTheme } = useTheme();
-	console.log(theme)
 	return (
 		<section className="flex flex-col items-center justify-center gap-4">
 

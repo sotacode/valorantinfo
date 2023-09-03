@@ -1,12 +1,19 @@
 import { Navbar } from "@/components/navbar";
 import { Link } from "@nextui-org/link";
 import { Head } from "./head";
+import { useTheme } from "next-themes";
+import { useEffect } from "react";
 
 export default function DefaultLayout({
 	children,
 }: {
 	children: React.ReactNode;
 }) {
+	const { theme, setTheme } = useTheme();
+	useEffect(() => {
+	  setTheme("dark")
+	}, [])
+	
 	return (
 		<div className="relative flex flex-col h-screen">
 			<Head />
