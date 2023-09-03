@@ -29,8 +29,16 @@ import {
 
 import { Logo } from "@/components/icons";
 import Image from "next/image";
+import { IsActiveProps } from "@/types/isActive";
+import { useRouter } from 'next/router';
+
+
 
 export const Navbar = () => {
+	const router = useRouter();
+	const pathActual = router.asPath;
+	console.log(pathActual)
+	//const [isActive, setIsActive] = useState<IsActiveProps>()
 	const searchInput = (
 		<Input
 			aria-label="Search"
@@ -82,38 +90,38 @@ export const Navbar = () => {
 					<p className="font-bold text-inherit">Info Valorant</p>
 				</NavbarBrand>
 				<NavbarContent className="hidden sm:flex gap-4" justify="center">
-					<NavbarItem isActive>
-						<Link color="foreground" href="/">
+					<NavbarItem isActive={pathActual=="/" ? true : false}>
+						<Link color={pathActual=="/" ? "secondary" : "foreground"} href="/" >
 							INICIO
 						</Link>
 					</NavbarItem>
-					<NavbarItem>
-						<Link color="foreground" href="/agents">
+					<NavbarItem isActive={pathActual=="/agents" ? true : false}>
+						<Link color={pathActual=="/agents" ? "secondary" : "foreground"} href="/agents">
 							AGENTS
 						</Link>
 					</NavbarItem>
-					<NavbarItem>
-						<Link href="/weapons" color="foreground">
+					<NavbarItem isActive={pathActual=="/weapons" ? true : false}>
+						<Link href="/weapons" color={pathActual=="/weapons" ? "secondary" : "foreground"}>
 							ARMAS
 						</Link>
 					</NavbarItem>
-					<NavbarItem>
-						<Link href="/maps" color="foreground">
+					<NavbarItem isActive={pathActual=="/maps" ? true : false}>
+						<Link href="/maps" color={pathActual=="/maps" ? "secondary" : "foreground"}>
 							MAPAS
 						</Link>
 					</NavbarItem>
-					<NavbarItem>
-						<Link href="/cards" color="foreground">
+					<NavbarItem isActive={pathActual=="/cards" ? true : false}>
+						<Link href="/cards" color={pathActual=="/cards" ? "secondary" : "foreground"}>
 							CARTAS
 						</Link>
 					</NavbarItem>
-					<NavbarItem>
-						<Link color="foreground" href="/tiers">
+					<NavbarItem isActive={pathActual=="/tiers" ? true : false}>
+						<Link color={pathActual=="/tiers" ? "secondary" : "foreground"} href="/tiers">
 							TIERS
 						</Link>
 					</NavbarItem>
-					<NavbarItem>
-						<Link color="foreground" href="/about">
+					<NavbarItem isActive={pathActual=="/about" ? true : false}>
+						<Link color={pathActual=="/about" ? "secondary" : "foreground"} href="/about">
 							ACERCA DE
 						</Link>
 					</NavbarItem>
