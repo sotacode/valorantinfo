@@ -11,6 +11,6 @@ module.exports = {
   theme: {
     extend: {},
   },
-  darkMode: "media", // Establece el dark mode como "media" por defecto
+  darkMode: "class", // Establece el dark mode como "media" por defecto
   plugins: [nextui()],
 }
