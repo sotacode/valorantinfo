@@ -21,7 +21,7 @@ export default function IndexPage() {
 		<section className="flex flex-col items-center justify-center gap-4">
 
 			<div className={`video-background relative`} style={{ marginTop: "-60px" }}>
-				<video autoPlay muted loop className="inset-0 object-cover z-20 opacity-30" onLoadedData={handleVideoLoad}>
+				<video autoPlay muted loop className="w-screen h-screen object-cover z-20 opacity-30" onLoadedData={handleVideoLoad}>
 					{/* <source src="/videos/contractglitches.webm" type="video/webm" /> */}
 					<source src="/videos/gekkobg.mp4" type="video/mp4" />
 				</video>
