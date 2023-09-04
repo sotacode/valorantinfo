@@ -19,7 +19,7 @@ export const DetailAgent:FC<Props> =  ({agent: {displayName, bustPortrait, backg
               className="object-cover absolute inset-0 z-20"
               height={500}
               shadow="md"
-              src={bustPortrait}
+              src={bustPortrait ? bustPortrait : ""}
               width="100%"
             />
           <Image
@@ -27,7 +27,7 @@ export const DetailAgent:FC<Props> =  ({agent: {displayName, bustPortrait, backg
               className="object-cover"
               height={500}
               shadow="md"
-              src={background}
+              src={background ? background : ""}
               width="100%"
             />
           </div>
