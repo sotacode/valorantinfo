@@ -6,7 +6,7 @@ import Link from 'next/link';
 
 const CarouselComponent = () => {
     return (
-        <div className="w-full max-w-screen-lg mx-auto">
+        <div className="w-full max-w-screen-lg mx-auto mt-8">
             <Carousel
                 showArrows={true}
                 infiniteLoop={true}

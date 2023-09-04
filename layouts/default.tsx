@@ -1,8 +1,10 @@
 import { Navbar } from "@/components/navbar";
-import { Link } from "@nextui-org/link";
 import { Head } from "./head";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
+import { siteConfig } from "@/config/site";
+import LanguageProvider from "@/context/language/LanguageProvider";
+import { Footer } from "@/components/footer";
 
 export default function DefaultLayout({
 	children,
@@ -11,6 +13,7 @@ export default function DefaultLayout({
 }) {
 	const { theme, setTheme } = useTheme();
 	const [show, setShow] = useState(false);
+	const { createdBy } = siteConfig;
 	useEffect(() => {
 		setTheme("dark");
 		setShow(true);
@@ -19,24 +22,16 @@ export default function DefaultLayout({
 	return (<>
 		{
 			show ?
-				<div className="relative flex flex-col h-screen">
-					<Head />
-					<Navbar />
-					<main className="container mx-auto max-w-7xl px-6 flex-grow">
-						{children}
-					</main>
-					<footer className="w-full flex items-center justify-center py-3">
-						<Link
-							isExternal
-							className="flex items-center gap-1 text-current"
-							href="https://portfolio-sotacode.vercel.app/"
-							title="nextui.org homepage"
-						>
-							<span className="text-default-600">Created by</span>
-							<p className="text-primary">SotaCode</p>
-						</Link>
-					</footer>
-				</div>
+				<>
+					<div className="relative flex flex-col h-screen">
+						<Head />
+						<Navbar />
+						<main className="container mx-auto max-w-7xl px-6 flex-grow">
+							{children}
+						</main>
+						<Footer />
+					</div>
+				</>
 				:
 				<></>
 
