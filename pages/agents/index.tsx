@@ -44,7 +44,15 @@ export default function Agents() {
         const data = await response.json();
         setAgents(data.data);
         console.log(selectedAgent);
-        if(!selectedAgent) setSelectedAgent(data.data[0])
+        if(!selectedAgent){ 
+          setSelectedAgent(data.data[0])
+        }else{
+          data.data.map((agent: Agent)=>{
+            if(agent.uuid==selectedAgent.uuid) setSelectedAgent(agent);
+            return
+          })
+        }
+
       } catch (error) {
         console.error('Error al obtener datos:', error);
       }
