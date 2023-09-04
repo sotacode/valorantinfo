@@ -7,7 +7,6 @@ interface Props {
     agent: Agent
 }
 
-
 export const CardAgent:FC<Props> = ({agent: {displayName, bustPortrait, backgroundGradientColors, description}}) => {
   return (
     <Card
