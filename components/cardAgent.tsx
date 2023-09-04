@@ -19,7 +19,7 @@ export const CardAgent:FC<Props> = ({agent: {displayName, bustPortrait, backgrou
         isZoomed
         alt="Woman listing to music"
         className="object-cover"
-        src={bustPortrait}
+        src={bustPortrait ? bustPortrait : ""}
         width={400}
       />
       <CardFooter className="flex justify-center items-center before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 absolute before:rounded-xl rounded-large bottom-1 w-[calc(100%_-_8px)] shadow-small ml-1 z-10 backdrop-blur-lg">
