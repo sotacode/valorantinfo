@@ -1,11 +1,24 @@
 import React, { FC } from "react";
-import {Card, CardBody, Image, Button, Progress} from "@nextui-org/react";
+import {Card, CardBody, Image, Button, Progress, Tooltip} from "@nextui-org/react";
 import { Agent } from "@/types/agent";
+import { BiPlayCircle, BiPauseCircle } from "react-icons/bi";
+import {useState} from 'react';
+import AudioAgent from "./audioAgent";
+import {useEffect} from 'react';
+import { TabsInfoAgent } from "./tabsInfoAgent";
+import { BsInfoCircle } from "react-icons/bs";
+
+
 interface Props {
   agent: Agent;
 }
-export const DetailAgent:FC<Props> =  ({agent: {displayName, bustPortrait, background, description, role}}) => {
-  const [liked, setLiked] = React.useState(false);
+export const DetailAgent:FC<Props> =  ({agent: {displayName, bustPortrait, background, description, role, voiceLine, abilities, displayIconSmall}}) => {
+  const [urlAudio, setUrlAudio] = useState(voiceLine.mediaList[0].wave)
+
+  useEffect(() => {
+    setUrlAudio(voiceLine.mediaList[0].wave);
+  }, [voiceLine])
+  
 
   return (
     <div
@@ -35,74 +48,45 @@ export const DetailAgent:FC<Props> =  ({agent: {displayName, bustPortrait, backg
           <div className="flex flex-col col-span-6 md:col-span-6">
             <div className="flex justify-between items-start">
               <div className="flex flex-col gap-0">
-                <h3 className="font-semibold text-foreground/90">{displayName}</h3>
-                <p className="text-small text-foreground/80">{description}</p>
-                <h1 className="text-large font-medium mt-2">{role?.displayName}</h1>
+                <div className="flex items-center">
+                  <Image 
+                   alt="Album cover"
+                   className="object-cover"
+                   height={20}
+                   shadow="md"
+                   src={role?.displayIcon ? role?.displayIcon : ""}
+                   width={20}
+                  />
+                  <h3 className="text-md font-medium ml-3">{role?.displayName}</h3>
+                  <div >
+                  <Tooltip 
+                    showArrow
+                    placement="top-end"
+                    content={role?.description ? role?.description : ""}
+                    classNames={{
+                      base: "py-2 px-4 max-w-[500px]",
+                    }}
+                  >
+                    <Button isIconOnly variant="light">
+                      <BsInfoCircle className="text-md"/>
+                    </Button>
+                    
+                  </Tooltip>
+
+                  </div>
+
+                </div>
+                <h1 className="text-6xl font-semibold text-foreground/90">{displayName}</h1>
+                <TabsInfoAgent description={description} abilities={abilities} displayIconSmall={displayIconSmall}/>
               </div>
-              <Button
-                isIconOnly
-                className="text-default-900/60 data-[hover]:bg-foreground/10 -translate-y-2 translate-x-2"
-                radius="full"
-                variant="light"
-                onPress={() => setLiked((v) => !v)}
-              >
-              </Button>
             </div>
 
-            <div className="flex flex-col mt-3 gap-1">
-              <Progress
-                aria-label="Music progress"
-                classNames={{
-                  indicator: "bg-default-800 dark:bg-white",
-                  track: "bg-default-500/30",
-                }}
-                color="default"
-                size="sm"
-                value={33}
-              />
-              <div className="flex justify-between">
-                <p className="text-small">1:23</p>
-                <p className="text-small text-foreground/50">4:32</p>
-              </div>
-            </div>
+            
+            <AudioAgent initialAudioUrl={urlAudio} />
 
-            <div className="flex w-full items-center justify-center">
-              <Button
-                isIconOnly
-                className="data-[hover]:bg-foreground/10"
-                radius="full"
-                variant="light"
-              >
-              </Button>
-              <Button
-                isIconOnly
-                className="data-[hover]:bg-foreground/10"
-                radius="full"
-                variant="light"
-              >
-              </Button>
-              <Button
-                isIconOnly
-                className="w-auto h-auto data-[hover]:bg-foreground/10"
-                radius="full"
-                variant="light"
-              >
-              </Button>
-              <Button
-                isIconOnly
-                className="data-[hover]:bg-foreground/10"
-                radius="full"
-                variant="light"
-              >
-              </Button>
-              <Button
-                isIconOnly
-                className="data-[hover]:bg-foreground/10"
-                radius="full"
-                variant="light"
-              >
-              </Button>
-            </div>
+            
+
+            
           </div>
         </div>
       </div>

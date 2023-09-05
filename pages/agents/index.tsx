@@ -43,7 +43,6 @@ export default function Agents() {
         }
         const data = await response.json();
         setAgents(data.data);
-        console.log(selectedAgent);
         if(!selectedAgent){ 
           setSelectedAgent(data.data[0])
         }else{
@@ -62,7 +61,7 @@ export default function Agents() {
   }, [language]);
 
   return (
-    <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
+    <section className="flex flex-col items-center justify-center gap-4 py-4 md:py-10">
 
       {showAllAgents ?
         <div className="gap-4 grid grid-cols-2 sm:grid-cols-3">

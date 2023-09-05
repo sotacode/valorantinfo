@@ -30,7 +30,6 @@ export const Navbar = () => {
 	const handleSelectionChange = (e: any) => {
 		if (e.target.value == "esES" && ctxLanguage!="esES") changeToSpanish() 
 		else if(e.target.value == "enUS" && ctxLanguage!="enUS") changeToEnglish();
-		console.log(e.target.value)
 		if(e.target.value!=="")	{
 			setLanguageSelected(new Set<string>([e.target.value]));
 			setLocalStorageLanguage(e.target.value);
