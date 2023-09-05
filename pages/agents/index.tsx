@@ -66,8 +66,8 @@ export default function Agents() {
       {showAllAgents ?
         <div className="gap-4 grid grid-cols-2 sm:grid-cols-3">
           {agents.map((agent) => {
-            return <div key={agent.uuid} onClick={() => handleSelectedCard(agent)}>
-              <CardAgent agent={agent} />
+            return <div key={agent.uuid}>
+              <CardAgent agent={agent} handleSelectedCard={handleSelectedCard}/>
             </div>
           })}
         </div>

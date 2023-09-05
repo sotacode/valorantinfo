@@ -21,14 +21,15 @@ export const TabsInfoAgent: React.FC<InfoAgentProps> = ({ description, abilities
                 classNames={{
                     tabList: "gap-6 w-full relative rounded-none p-0 border-b border-divider",
                     cursor: "w-full bg-[#b249f8]",
-                    tab: "max-w-fit px-0 h-12",
+                    tab: "max-w-fit px-0 h-24",
                     tabContent: "group-data-[selected=true]:text-[#b249f8]"
                 }}
             >
                 <Tab
                     key="description"
                     title={
-                        <div className="flex items-center min-w-[50px] min-h-[50px] justify-center">
+                        <div className="flex flex-col justify-center items-center min-w-[50px] min-h-[50px] justify-center">
+                            <h1 className="text-lg font-bold text-foreground/90 opacity-0">a</h1>
                             <Image
                                 alt="Album cover"
                                 className="max-w-[100px]"
@@ -48,7 +49,8 @@ export const TabsInfoAgent: React.FC<InfoAgentProps> = ({ description, abilities
                 <Tab
                     key="q"
                     title={
-                        <div className="flex items-center min-w-[50px] min-h-[50px] justify-center">
+                        <div className="flex flex-col justify-center items-center min-w-[50px] min-h-[50px] justify-center">
+                            <h1 className="text-lg font-bold text-foreground/90">Q</h1>
                             <Image
                                 alt="Album cover"
                                 className="max-w-[100px]"
@@ -67,7 +69,8 @@ export const TabsInfoAgent: React.FC<InfoAgentProps> = ({ description, abilities
                 <Tab
                     key="w"
                     title={
-                        <div className="flex items-center min-w-[50px] min-h-[50px] justify-center">
+                        <div className="flex flex-col justify-center items-center min-w-[50px] min-h-[50px] justify-center">
+                            <h1 className="text-lg font-bold text-foreground/90">W</h1>
                             <Image
                                 alt="Album cover"
                                 className="max-w-[100px]"
@@ -86,7 +89,8 @@ export const TabsInfoAgent: React.FC<InfoAgentProps> = ({ description, abilities
                 <Tab
                     key="e"
                     title={
-                        <div className="flex items-center min-w-[50px] min-h-[50px] justify-center">
+                        <div className="flex flex-col justify-center items-center min-w-[50px] min-h-[50px] justify-center">
+                            <h1 className="text-lg font-bold text-foreground/90">E</h1>
                             <Image
                                 alt="Album cover"
                                 className="max-w-[100px]"
@@ -105,7 +109,8 @@ export const TabsInfoAgent: React.FC<InfoAgentProps> = ({ description, abilities
                 <Tab
                     key="r"
                     title={
-                        <div className="flex items-center min-w-[50px] min-h-[50px] justify-center">
+                        <div className="flex flex-col justify-center items-center min-w-[50px] min-h-[50px] justify-center">
+                            <h1 className="text-lg font-bold text-foreground/90">R</h1>
                             <Image
                                 alt="Album cover"
                                 className="max-w-[100px]"
