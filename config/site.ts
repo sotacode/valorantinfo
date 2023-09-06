@@ -286,7 +286,7 @@ export const siteConfig = {
 		{
 			language: "ar-AE",
 			languageFormated: "arAE",
-			url: "https://flagcdn.com/ar.svg"
+			url: "https://flagcdn.com/ae.svg"
 		},
 		{
 			language: "de-DE",
