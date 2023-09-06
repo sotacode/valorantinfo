@@ -23,7 +23,7 @@ export default function DefaultLayout({
 		{
 			show ?
 				<>
-					<div className="relative flex flex-col h-screen">
+					<div className="relative flex flex-col">
 						<Head />
 						<Navbar />
 						<main className="container mx-auto max-w-7xl px-6 flex-grow">
