@@ -64,7 +64,7 @@ export default function Agents() {
     <section className="flex flex-col items-center justify-center gap-4 py-4 md:py-10">
 
       {showAllAgents ?
-        <div className="gap-4 grid grid-cols-2 sm:grid-cols-3">
+        <div className="gap-4 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3">
           {agents.map((agent) => {
             return <div key={agent.uuid}>
               <CardAgent agent={agent} handleSelectedCard={handleSelectedCard}/>
@@ -73,7 +73,9 @@ export default function Agents() {
         </div>
         :
         <div>
-          <PiArrowFatLeftFill onClick={handleBackToAgents} className='text-4xl'/>
+          <div className='absolute flex items-center justify-center w-[50px] h-[50px]'>
+            <PiArrowFatLeftFill onClick={handleBackToAgents} className='absolute group text-3xl hover:text-4xl z-30 hover:transition-all'/>
+          </div>
           {selectedAgent && <DetailAgent agent={selectedAgent} />}
         </div>
       }
