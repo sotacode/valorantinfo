@@ -1,6 +1,8 @@
-import { useState } from "react";
+import { useState, useContext } from 'react';
 import { Ability } from "@/types/agent";
 import { Tabs, Tab, Chip, Image } from "@nextui-org/react";
+import { siteConfig } from "@/config/site";
+import { LanguageContext } from '@/context/language/LanguageContext';
 
 
 interface InfoAgentProps {
@@ -10,7 +12,8 @@ interface InfoAgentProps {
 }
 
 export const TabsInfoAgent: React.FC<InfoAgentProps> = ({ description, abilities, displayIconSmall }) => {
-    const [selected, setSelected] = useState<any>("description");
+    const {titleDescription} = siteConfig;
+    const {language} = useContext(LanguageContext);
 
     return (
         <div className="flex w-full flex-col mt-4">
@@ -41,7 +44,7 @@ export const TabsInfoAgent: React.FC<InfoAgentProps> = ({ description, abilities
                     }
                 >
                     <div className="min-h-[250px]">
-                        <h3 className="text-lg font-medium ml-2">Description</h3>
+                        <h3 className="text-lg font-medium ml-2">{titleDescription[language]}</h3>
                         <p className="text-md font-thin ml-3 mt-2">{description}</p>
                     </div>
 
