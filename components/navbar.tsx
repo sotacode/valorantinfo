@@ -25,20 +25,20 @@ export const Navbar = () => {
 
 	const { languaje, navItems } = siteConfig;
 
-	const { language: ctxLanguage, changeToEnglish, changeToSpanish } = useContext(LanguageContext)
+	const { language: ctxLanguage, changeLanguage } = useContext(LanguageContext)
 	const [languageSelected, setLanguageSelected] = useState(new Set<string>(["esES"]));
 	const handleSelectionChange = (e: any) => {
-		if (e.target.value == "esES" && ctxLanguage!="esES") changeToSpanish() 
-		else if(e.target.value == "enUS" && ctxLanguage!="enUS") changeToEnglish();
+		//console.log(e.target.value)
 		if(e.target.value!=="")	{
+			changeLanguage(e.target.value)
 			setLanguageSelected(new Set<string>([e.target.value]));
 			setLocalStorageLanguage(e.target.value);
 		}
 	};
 	useEffect(() => {
 		const currentLanguage = getLocalStorageLanguage();
-		if (currentLanguage == "esES" && ctxLanguage!="esES") changeToSpanish() 
-		else if(currentLanguage == "enUS" && ctxLanguage!="enUS") changeToEnglish();
+		console.log(ctxLanguage)
+		changeLanguage(ctxLanguage);
 		setLanguageSelected(new Set<string>([currentLanguage]));
 	}, [])
 	
@@ -111,7 +111,7 @@ export const Navbar = () => {
 				<NavbarContent justify="end">
 					<NavbarBrand className="flex justify-end">
 						<Select
-							className="max-w-[105px]"
+							className="max-w-[130px]"
 							aria-label="idioma"
 							labelPlacement="outside-left"
 							defaultSelectedKeys={["esES"]}
@@ -121,16 +121,128 @@ export const Navbar = () => {
 							<SelectItem
 								key="esES"
 								startContent={<Avatar alt="ES" className="w-6 h-6" src="https://flagcdn.com/es.svg" />}
-								textValue={languaje.spanish["esES"]}
+								textValue="es-ES"
 							>
-								ES
+								es-ES
 							</SelectItem>
 							<SelectItem
 								key="enUS"
 								startContent={<Avatar alt="EN" className="w-6 h-6" src="https://flagcdn.com/us.svg" />}
-								textValue={languaje.english["esES"]}
+								textValue="en-US"
 							>
-								EN
+								en-US
+							</SelectItem>
+							<SelectItem
+								key="arAE"
+								startContent={<Avatar alt="EN" className="w-6 h-6" src="https://flagcdn.com/ae.svg" />}
+								textValue="ar-AE"
+							>
+								ar-AE
+							</SelectItem>
+							<SelectItem
+								key="deDE"
+								startContent={<Avatar alt="EN" className="w-6 h-6" src="https://flagcdn.com/de.svg" />}
+								textValue="de-DE"
+							>
+								de-DE
+							</SelectItem>
+							<SelectItem
+								key="esMX"
+								startContent={<Avatar alt="EN" className="w-6 h-6" src="https://flagcdn.com/mx.svg" />}
+								textValue="es-MX"
+							>
+								es-MX
+							</SelectItem>
+							<SelectItem
+								key="frFR"
+								startContent={<Avatar alt="EN" className="w-6 h-6" src="https://flagcdn.com/fr.svg" />}
+								textValue="fr-FR"
+							>
+								fr-FR
+							</SelectItem>
+							<SelectItem
+								key="idID"
+								startContent={<Avatar alt="EN" className="w-6 h-6" src="https://flagcdn.com/id.svg" />}
+								textValue="id-ID"
+							>
+								id-ID
+							</SelectItem>
+							<SelectItem
+								key="itIT"
+								startContent={<Avatar alt="EN" className="w-6 h-6" src="https://flagcdn.com/it.svg" />}
+								textValue="it-IT"
+							>
+								it-IT
+							</SelectItem>
+							<SelectItem
+								key="jaJP"
+								startContent={<Avatar alt="EN" className="w-6 h-6" src="https://flagcdn.com/jp.svg" />}
+								textValue="ja-JP"
+							>
+								ja-JP
+							</SelectItem>
+							<SelectItem
+								key="koKR"
+								startContent={<Avatar alt="EN" className="w-6 h-6" src="https://flagcdn.com/kr.svg" />}
+								textValue="ko-KR"
+							>
+								ko-KR
+							</SelectItem>
+							<SelectItem
+								key="plPL"
+								startContent={<Avatar alt="EN" className="w-6 h-6" src="https://flagcdn.com/pl.svg" />}
+								textValue="pl-PL"
+							>
+								pl-PL
+							</SelectItem>
+							<SelectItem
+								key="ptBR"
+								startContent={<Avatar alt="EN" className="w-6 h-6" src="https://flagcdn.com/br.svg" />}
+								textValue="pt-BR"
+							>
+								pt-BR
+							</SelectItem>
+							<SelectItem
+								key="ruRU"
+								startContent={<Avatar alt="EN" className="w-6 h-6" src="https://flagcdn.com/ru.svg" />}
+								textValue="ru-RU"
+							>
+								ru-RU
+							</SelectItem>
+							<SelectItem
+								key="thTH"
+								startContent={<Avatar alt="EN" className="w-6 h-6" src="https://flagcdn.com/th.svg" />}
+								textValue="th-TH"
+							>
+								th-TH
+							</SelectItem>
+							<SelectItem
+								key="trTR"
+								startContent={<Avatar alt="EN" className="w-6 h-6" src="https://flagcdn.com/tr.svg" />}
+								textValue="tr-TR"
+							>
+								tr-TR
+							</SelectItem>
+							<SelectItem
+								key="viVN"
+								startContent={<Avatar alt="EN" className="w-6 h-6" src="https://flagcdn.com/vn.svg" />}
+								textValue="vi-VN"
+							>
+								vi-VN
+							</SelectItem>
+							<SelectItem
+								key="zhCN"
+								startContent={<Avatar alt="EN" className="w-6 h-6" src="https://flagcdn.com/cn.svg" />}
+								textValue="zh-CN"
+							>
+								zh-CN
+							</SelectItem>
+							<SelectItem
+								key="zhTW"
+								startContent={<Avatar alt="EN" className="w-6 h-6" src="https://flagcdn.com/tw.svg" />}
+								textValue="zh-TW"
+							>
+								zh-TW
 							</SelectItem>
 						</Select>
 					</NavbarBrand>

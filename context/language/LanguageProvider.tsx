@@ -8,31 +8,30 @@ export interface LanguageState {
 }
 
 const LANGUAGE_INITIAL_STATE: LanguageState = {
-    language: 'esES'
+    language: 'esMX'
 }
 
 
 export default function LanguageProvider({ children }: { children: React.ReactNode}){
     const [state, dispatch] = useReducer(languageReducer, LANGUAGE_INITIAL_STATE)
-    const changeToEnglish = ()=>{
-        dispatch({type: 'enUS'})
+    const changeLanguage = (language: LanguageType)=>{
+        dispatch({type: language})
     }
-    const changeToSpanish = ()=>{
-        dispatch({type: 'esES'})
-    }
+
     useEffect(() => {
         const currentLanguage= getLocalStorageLanguage();
         if(currentLanguage==null){
-            setLocalStorageLanguage("esES")
-            dispatch({type: 'esES'})
+            setLocalStorageLanguage("esMX")
+            dispatch({type: 'esMX'})
+        }else{
+            dispatch({type: currentLanguage})
         }
       }, [])
     
     return (
         <LanguageContext.Provider value={{
             ...state,
-            changeToEnglish,
-            changeToSpanish
+            changeLanguage,
         }}>
             {children}
         </LanguageContext.Provider>

@@ -3,7 +3,7 @@ import { BiPauseCircle, BiPlayCircle } from 'react-icons/bi';
 import { Button, Progress } from '@nextui-org/react';
 
 interface AudioAgentProps {
-  initialAudioUrl: string;
+  initialAudioUrl: string | undefined;
 }
 
 const AudioAgent: React.FC<AudioAgentProps> = ({ initialAudioUrl }) => {
@@ -72,41 +72,45 @@ const AudioAgent: React.FC<AudioAgentProps> = ({ initialAudioUrl }) => {
   };
 
   return (
-    <>
-      <div className="flex flex-col mt-3 gap-1">
-        <Progress
-          aria-label="Music progress"
-          classNames={{
-            indicator: 'bg-default-800 dark:bg-white',
-            track: 'bg-default-500/30',
-          }}
-          color="secondary"
-          size="sm"
-          value={currentTime}
-        />
-        <div className="flex justify-between">
-          <p className="text-small">{currentTimeFormated}</p>
-          <p className="text-small text-foreground/50">{formatTime(duration)}</p>
+    <> {
+      initialAudioUrl != undefined &&
+      <>
+        <div className="flex flex-col mt-3 gap-1">
+          <Progress
+            aria-label="Music progress"
+            classNames={{
+              indicator: 'bg-default-800 dark:bg-white',
+              track: 'bg-default-500/30',
+            }}
+            color="secondary"
+            size="sm"
+            value={currentTime}
+          />
+          <div className="flex justify-between">
+            <p className="text-small">{currentTimeFormated}</p>
+            <p className="text-small text-foreground/50">{formatTime(duration)}</p>
+          </div>
         </div>
-      </div>
-      {
+
         <audio ref={audioRef} controls className="hidden">
           <source src={initialAudioUrl} type="audio/wav" />
           Tu navegador no admite la reproducción de audio.
         </audio>
-      }
-      <div className="flex w-full items-center justify-center">
-        <Button
-          isIconOnly
-          className="w-auto h-auto data-[hover]:bg-foreground/10"
-          radius="full"
-          variant="light"
-          onClick={handlePlayAudio}
-          disabled={!loadedData}
-        >
-          {switchPlay ? <BiPlayCircle className="text-5xl" /> : <BiPauseCircle className="text-5xl" />}
-        </Button>
-      </div>
+
+        <div className="flex w-full items-center justify-center">
+          <Button
+            isIconOnly
+            className="w-auto h-auto data-[hover]:bg-foreground/10"
+            radius="full"
+            variant="light"
+            onClick={handlePlayAudio}
+            disabled={!loadedData}
+          >
+            {switchPlay ? <BiPlayCircle className="text-5xl" /> : <BiPauseCircle className="text-5xl" />}
+          </Button>
+        </div>
+      </>
+    }
     </>
   );
 };

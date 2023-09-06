@@ -13,10 +13,10 @@ interface Props {
   agent: Agent;
 }
 export const DetailAgent:FC<Props> =  ({agent: {displayName, bustPortrait, background, description, role, voiceLine, abilities, displayIconSmall}}) => {
-  const [urlAudio, setUrlAudio] = useState(voiceLine.mediaList[0].wave)
+  const [urlAudio, setUrlAudio] = useState(voiceLine ? voiceLine.mediaList[0].wave : undefined)
 
   useEffect(() => {
-    setUrlAudio(voiceLine.mediaList[0].wave);
+    setUrlAudio(voiceLine ? voiceLine.mediaList[0].wave : undefined);
   }, [voiceLine])
   
 
