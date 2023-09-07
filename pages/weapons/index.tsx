@@ -1,5 +1,6 @@
 import { CardWeapon } from "@/components/CardWeapon";
 import { DetailWeapon } from "@/components/detailWeapon";
+import { WeaponCarousel } from "@/components/weaponCarousel";
 import { WeaponsPriorityProps, weaponsINFO } from "@/config/weapons";
 import { LanguageContext } from "@/context/language/LanguageContext"
 import { Weapon, Weapons } from "@/types/weapons"
@@ -111,10 +112,10 @@ export default function Weapons() {
   }, [language])
 
   return (
-    <div className="flex flex-col items-center justify-center gap-3 max-w-screen-xl">
+    <div className="max-w-screen-xl">
       {
         !showDetailWeapon || !selectedWeapon ?
-          <>
+          <div className="flex flex-col items-center justify-center gap-3">
             <div className="flex grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4">
               <div className="col-span-1 p-3">
                 <div className=" p-2">
@@ -196,14 +197,20 @@ export default function Weapons() {
               </div>
             </div>
 
-          </>
-          :
-          <>
-          <div className='absolute w-[50px] h-[50px]'>
-            <PiArrowFatLeftFill onClick={handleBackToWeapons} className='absolute group text-3xl hover:text-4xl z-30 hover:transition-all'/>
           </div>
+          :
+          <div className="w-full">
+            <div className="weaponcarousel w-full max-w-screen-xl mx-auto">
+              <WeaponCarousel weapon={selectedWeapon}/>
+            </div>
+            <div className="w-full flex items-center mt-4">
+              <div className='w-[50px] h-[50px]'>
+                <PiArrowFatLeftFill onClick={handleBackToWeapons} className='absolute group text-3xl hover:text-4xl z-30 hover:transition-all' />
+              </div>
+              <h1 className="mx-auto text-bold text-3xl">{selectedWeapon.displayName}</h1>
+            </div>
             <DetailWeapon weapon={selectedWeapon} />
-          </>
+          </div>
       }
     </div>
   )

@@ -55,3 +55,14 @@ element.style {
 .cardweapon:hover .imageweapon {
     transform: scale(1.1); /* Aumenta la escala al 120% */
 }
+
+
+.weaponcarousel .carousel.carousel-slider {
+    border-radius: 0px !important;
+}
+
+.elementskin{
+    overflow-y: visible;
+    padding-top: 20px;
+}
+
