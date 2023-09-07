@@ -44,3 +44,14 @@ element.style {
 .fontvalorant {
     font-family: "valorantFont", sans-serif;
 }
+
+
+.cardweapon .imageweapon {
+    transform: scale(1); /* Escala normal (sin cambio) */
+    transition: transform 0.3s ease; /* Transición suave de 0.3 segundos */
+}
+
+/* Cambio de escala cuando el mouse se posa sobre la tarjeta */
+.cardweapon:hover .imageweapon {
+    transform: scale(1.1); /* Aumenta la escala al 120% */
+}

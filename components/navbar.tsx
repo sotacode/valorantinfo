@@ -31,7 +31,6 @@ export const Navbar = () => {
 	const { language: ctxLanguage, changeLanguage } = useContext(LanguageContext)
 	const [languageSelected, setLanguageSelected] = useState(new Set<string>(["esES"]));
 	const handleSelectionChange = (e: any) => {
-		//console.log(e.target.value)
 		if (e.target.value !== "") {
 			changeLanguage(e.target.value)
 			setLanguageSelected(new Set<string>([e.target.value]));
@@ -40,7 +39,6 @@ export const Navbar = () => {
 	};
 	useEffect(() => {
 		const currentLanguage = getLocalStorageLanguage();
-		console.log(ctxLanguage)
 		changeLanguage(ctxLanguage);
 		setLanguageSelected(new Set<string>([currentLanguage]));
 	}, [])
