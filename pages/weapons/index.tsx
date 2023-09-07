@@ -1,6 +1,6 @@
 import { CardWeapon } from "@/components/CardWeapon";
 import { DetailWeapon } from "@/components/detailWeapon";
-import { WeaponCarousel } from "@/components/weaponCarousel";
+import { WeaponMarquee } from "@/components/weaponMarquee";
 import { WeaponsPriorityProps, weaponsINFO } from "@/config/weapons";
 import { LanguageContext } from "@/context/language/LanguageContext"
 import { Weapon, Weapons } from "@/types/weapons"
@@ -201,7 +201,7 @@ export default function Weapons() {
           :
           <div className="w-full">
             <div className="weaponcarousel w-full max-w-screen-xl mx-auto">
-              <WeaponCarousel weapon={selectedWeapon}/>
+              <WeaponMarquee weapon={selectedWeapon}/>
             </div>
             <div className="w-full flex items-center mt-4">
               <div className='w-[50px] h-[50px]'>
