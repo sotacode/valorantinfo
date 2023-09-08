@@ -10,7 +10,7 @@
     font-weight: normal;
     font-style: normal;
     font-display: swap;
-  }
+}
 
 .carousel .thumbs {
     display: flex;
@@ -22,7 +22,9 @@
 element.style {
     width: 80px;
 }
-.carousel .thumb.selected, .carousel .thumb:hover {
+
+.carousel .thumb.selected,
+.carousel .thumb:hover {
     border: 3px solid #b249f8 !important;
 }
 
@@ -37,6 +39,7 @@ element.style {
 .carousel.carousel-slider {
     border-radius: 50px;
 }
+
 .carousel .carousel-status {
     display: none;
 }
@@ -47,13 +50,16 @@ element.style {
 
 
 .cardweapon .imageweapon {
-    transform: scale(1); /* Escala normal (sin cambio) */
-    transition: transform 0.3s ease; /* Transición suave de 0.3 segundos */
+    transform: scale(1);
+    /* Escala normal (sin cambio) */
+    transition: transform 0.3s ease;
+    /* Transición suave de 0.3 segundos */
 }
 
 /* Cambio de escala cuando el mouse se posa sobre la tarjeta */
 .cardweapon:hover .imageweapon {
-    transform: scale(1.1); /* Aumenta la escala al 120% */
+    transform: scale(1.1);
+    /* Aumenta la escala al 120% */
 }
 
 
@@ -61,8 +67,31 @@ element.style {
     border-radius: 0px !important;
 }
 
-.elementskin{
+.elementskin {
     overflow-y: visible;
     padding-top: 20px;
 }
 
+
+
+.carousel-container {
+    max-width: 100%; /* Ajusta al ancho máximo disponible */
+    height: auto; /* Ajusta automáticamente la altura */
+  }
+  .carousel-container .control-dots{
+    display: none !important;
+  }
+  
+  .carousel-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto; /* Ajusta automáticamente la altura */
+  }
+  
+  .carousel-slide img.object-fit-cover {
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain; /* Ajusta automáticamente la relación de aspecto */
+  }

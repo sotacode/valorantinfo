@@ -24,5 +24,765 @@ export const weaponsINFO = {
         { tag: "spectre", uuid: '462080d1-4035-2937-7c09-27aa2a5c27a7', priority: 2 },
         { tag: "stinger", uuid: 'f7e1b454-4ad4-1063-ec0a-159e56b58941', priority: 1 },
         { tag: "melee", uuid: '2f59173c-4bed-b6c3-2191-dea9b58be9c7', priority: 1 },
-    ]
+    ],
+
+    detailWeaponsTexts: {
+        esES: {
+            displayName: {
+                title: "Nombre",
+                description: null,
+            },
+            category: {
+                title: "Categoría",
+                description: null,
+            },
+            cost: {
+                title: "Costo",
+                description: null
+            },
+            weaponStats: {
+                title: "Estadísticas",
+                description: null
+            },
+            fireRate: {
+                title: "Velocidad de Disparo",
+                description: null
+            },
+            magazineSize: {
+                title: "Tamaño del Cargador",
+                description: null,
+            },
+            equipTimeSeconds: {
+                title: "Tiempo de Equipar Arma",
+                description: null
+            },
+            reloadTimeSeconds: {
+                title: "Tiempo de Recarga de Arma",
+                description: null
+            },
+            firstBulletAccuracy: {
+                title: "Precisión de la Primera Bala",
+                description: null
+            },
+            wallPenetration: {
+                title: "Penetración de la Bala",
+                description: null
+            }
+        },
+        enUS: {
+            displayName: {
+                title: "Name",
+                description: null,
+            },
+            category: {
+                title: "Category",
+                description: null,
+            },
+            cost: {
+                title: "Cost",
+                description: null
+            },
+            weaponStats: {
+                title: "Statistics",
+                description: null
+            },
+            fireRate: {
+                title: "Fire Rate",
+                description: null
+            },
+            magazineSize: {
+                title: "Magazine Size",
+                description: null,
+            },
+            equipTimeSeconds: {
+                title: "Equip Time",
+                description: null
+            },
+            reloadTimeSeconds: {
+                title: "Reload Time",
+                description: null
+            },
+            firstBulletAccuracy: {
+                title: "First Bullet Accuracy",
+                description: null
+            },
+            wallPenetration: {
+                title: "Bullet Penetration",
+                description: null
+            }
+        },
+        arAE: {
+            displayName: {
+                title: "الاسم",
+                description: null,
+            },
+            category: {
+                title: "الفئة",
+                description: null,
+            },
+            cost: {
+                title: "التكلفة",
+                description: null
+            },
+            weaponStats: {
+                title: "الإحصائيات",
+                description: null
+            },
+            fireRate: {
+                title: "سرعة الإطلاق",
+                description: null
+            },
+            magazineSize: {
+                title: "حجم المخزن",
+                description: null,
+            },
+            equipTimeSeconds: {
+                title: "وقت التجهيز",
+                description: null
+            },
+            reloadTimeSeconds: {
+                title: "وقت إعادة التحميل",
+                description: null
+            },
+            firstBulletAccuracy: {
+                title: "دقة الرصاصة الأولى",
+                description: null
+            },
+            wallPenetration: {
+                title: "قوة اختراق الرصاص",
+                description: null
+            }
+        },
+        deDE: {
+            displayName: {
+                title: "Name",
+                description: null,
+            },
+            category: {
+                title: "Kategorie",
+                description: null,
+            },
+            cost: {
+                title: "Kosten",
+                description: null
+            },
+            weaponStats: {
+                title: "Statistiken",
+                description: null
+            },
+            fireRate: {
+                title: "Feuerrate",
+                description: null
+            },
+            magazineSize: {
+                title: "Magazingröße",
+                description: null,
+            },
+            equipTimeSeconds: {
+                title: "Waffenbereitschaftszeit",
+                description: null
+            },
+            reloadTimeSeconds: {
+                title: "Nachladezeit",
+                description: null
+            },
+            firstBulletAccuracy: {
+                title: "Erste-Schuss-Genauigkeit",
+                description: null
+            },
+            wallPenetration: {
+                title: "Durchschlagskraft",
+                description: null
+            }
+        },
+        esMX: {
+            displayName: {
+                title: "Nombre",
+                description: null,
+            },
+            category: {
+                title: "Categoría",
+                description: null,
+            },
+            cost: {
+                title: "Costo",
+                description: null
+            },
+            weaponStats: {
+                title: "Estadísticas",
+                description: null
+            },
+            fireRate: {
+                title: "Velocidad de Disparo",
+                description: null
+            },
+            magazineSize: {
+                title: "Tamaño del Cargador",
+                description: null,
+            },
+            equipTimeSeconds: {
+                title: "Tiempo de Equipar Arma",
+                description: null
+            },
+            reloadTimeSeconds: {
+                title: "Tiempo de Recarga de Arma",
+                description: null
+            },
+            firstBulletAccuracy: {
+                title: "Precisión de la Primera Bala",
+                description: null
+            },
+            wallPenetration: {
+                title: "Penetración de la Bala",
+                description: null
+            }
+        },
+        frFR: {
+            displayName: {
+                title: "Nom",
+                description: null,
+            },
+            category: {
+                title: "Catégorie",
+                description: null,
+            },
+            cost: {
+                title: "Coût",
+                description: null
+            },
+            weaponStats: {
+                title: "Statistiques",
+                description: null
+            },
+            fireRate: {
+                title: "Cadence de Tir",
+                description: null
+            },
+            magazineSize: {
+                title: "Taille du Chargeur",
+                description: null,
+            },
+            equipTimeSeconds: {
+                title: "Temps d'Équipement",
+                description: null
+            },
+            reloadTimeSeconds: {
+                title: "Temps de Rechargement de l'Arme",
+                description: null
+            },
+            firstBulletAccuracy: {
+                title: "Précision de la Première Balle",
+                description: null
+            },
+            wallPenetration: {
+                title: "Pénétration des Balles",
+                description: null
+            }
+        },
+        idID: {
+            displayName: {
+                title: "Nama",
+                description: null,
+            },
+            category: {
+                title: "Kategori",
+                description: null,
+            },
+            cost: {
+                title: "Biaya",
+                description: null
+            },
+            weaponStats: {
+                title: "Statistik",
+                description: null
+            },
+            fireRate: {
+                title: "Laju Tembak",
+                description: null
+            },
+            magazineSize: {
+                title: "Ukuran Magazen",
+                description: null,
+            },
+            equipTimeSeconds: {
+                title: "Waktu Persiapan Senjata",
+                description: null
+            },
+            reloadTimeSeconds: {
+                title: "Waktu Pengisian Ulang Senjata",
+                description: null
+            },
+            firstBulletAccuracy: {
+                title: "Akurasi Peluru Pertama",
+                description: null
+            },
+            wallPenetration: {
+                title: "Penetrasi Peluru",
+                description: null
+            }
+        },
+        itIT: {
+            displayName: {
+                title: "Nome",
+                description: null,
+            },
+            category: {
+                title: "Categoria",
+                description: null,
+            },
+            cost: {
+                title: "Costo",
+                description: null
+            },
+            weaponStats: {
+                title: "Statistiche",
+                description: null
+            },
+            fireRate: {
+                title: "Cadence di Fuoco",
+                description: null
+            },
+            magazineSize: {
+                title: "Dimensione del Caricatore",
+                description: null,
+            },
+            equipTimeSeconds: {
+                title: "Tempo di Equipaggiamento",
+                description: null
+            },
+            reloadTimeSeconds: {
+                title: "Tempo di Ricarica dell'Arma",
+                description: null
+            },
+            firstBulletAccuracy: {
+                title: "Precisione del Primo Colpo",
+                description: null
+            },
+            wallPenetration: {
+                title: "Penetrazione del Proiettile",
+                description: null
+            }
+        },
+        jaJP: {
+            displayName: {
+                title: "名前",
+                description: null,
+            },
+            category: {
+                title: "カテゴリー",
+                description: null,
+            },
+            cost: {
+                title: "コスト",
+                description: null
+            },
+            weaponStats: {
+                title: "統計",
+                description: null
+            },
+            fireRate: {
+                title: "射撃速度",
+                description: null
+            },
+            magazineSize: {
+                title: "マガジンサイズ",
+                description: null,
+            },
+            equipTimeSeconds: {
+                title: "装備時間",
+                description: null
+            },
+            reloadTimeSeconds: {
+                title: "武器のリロード時間",
+                description: null
+            },
+            firstBulletAccuracy: {
+                title: "初弾の精度",
+                description: null
+            },
+            wallPenetration: {
+                title: "弾丸の貫通",
+                description: null
+            }
+        },
+        koKR: {
+            displayName: {
+                title: "이름",
+                description: null,
+            },
+            category: {
+                title: "카테고리",
+                description: null,
+            },
+            cost: {
+                title: "비용",
+                description: null
+            },
+            weaponStats: {
+                title: "통계",
+                description: null
+            },
+            fireRate: {
+                title: "사격 속도",
+                description: null
+            },
+            magazineSize: {
+                title: "탄창 크기",
+                description: null,
+            },
+            equipTimeSeconds: {
+                title: "무기 장착 시간",
+                description: null
+            },
+            reloadTimeSeconds: {
+                title: "무기 재장전 시간",
+                description: null
+            },
+            firstBulletAccuracy: {
+                title: "첫 발 정확도",
+                description: null
+            },
+            wallPenetration: {
+                title: "탄환 관통력",
+                description: null
+            }
+        },
+        plPL: {
+            displayName: {
+                title: "Nazwa",
+                description: null,
+            },
+            category: {
+                title: "Kategoria",
+                description: null,
+            },
+            cost: {
+                title: "Koszt",
+                description: null
+            },
+            weaponStats: {
+                title: "Statystyki",
+                description: null
+            },
+            fireRate: {
+                title: "Szybkość Ognia",
+                description: null
+            },
+            magazineSize: {
+                title: "Rozmiar Magazynka",
+                description: null,
+            },
+            equipTimeSeconds: {
+                title: "Czas Wyposażenia",
+                description: null
+            },
+            reloadTimeSeconds: {
+                title: "Czas Przeładowania Broni",
+                description: null
+            },
+            firstBulletAccuracy: {
+                title: "Celność Pierwszego Strzału",
+                description: null
+            },
+            wallPenetration: {
+                title: "Przenikliwość Pocisków",
+                description: null
+            }
+        },
+        ptBR: {
+            displayName: {
+                title: "Nome",
+                description: null,
+            },
+            category: {
+                title: "Categoria",
+                description: null,
+            },
+            cost: {
+                title: "Custo",
+                description: null
+            },
+            weaponStats: {
+                title: "Estatísticas",
+                description: null
+            },
+            fireRate: {
+                title: "Taxa de Tiro",
+                description: null
+            },
+            magazineSize: {
+                title: "Tamanho do Carregador",
+                description: null,
+            },
+            equipTimeSeconds: {
+                title: "Tempo de Equipar Arma",
+                description: null
+            },
+            reloadTimeSeconds: {
+                title: "Tempo de Recarga de Arma",
+                description: null
+            },
+            firstBulletAccuracy: {
+                title: "Precisão do Primeiro Tiro",
+                description: null
+            },
+            wallPenetration: {
+                title: "Penetração de Projétil",
+                description: null
+            }
+        },
+        ruRU: {
+            displayName: {
+                title: "Название",
+                description: null,
+            },
+            category: {
+                title: "Категория",
+                description: null,
+            },
+            cost: {
+                title: "Стоимость",
+                description: null
+            },
+            weaponStats: {
+                title: "Статистика",
+                description: null
+            },
+            fireRate: {
+                title: "Скорострельность",
+                description: null
+            },
+            magazineSize: {
+                title: "Размер магазина",
+                description: null,
+            },
+            equipTimeSeconds: {
+                title: "Время экипировки",
+                description: null
+            },
+            reloadTimeSeconds: {
+                title: "Время перезарядки оружия",
+                description: null
+            },
+            firstBulletAccuracy: {
+                title: "Точность первого выстрела",
+                description: null
+            },
+            wallPenetration: {
+                title: "Пробиваемость стены",
+                description: null
+            }
+        },
+        thTH: {
+            displayName: {
+                title: "ชื่อ",
+                description: null,
+            },
+            category: {
+                title: "หมวดหมู่",
+                description: null,
+            },
+            cost: {
+                title: "ราคา",
+                description: null
+            },
+            weaponStats: {
+                title: "สถิติ",
+                description: null
+            },
+            fireRate: {
+                title: "อัตราการยิง",
+                description: null
+            },
+            magazineSize: {
+                title: "ขนาดนิมิต",
+                description: null,
+            },
+            equipTimeSeconds: {
+                title: "เวลาในการเตรียมอาวุธ",
+                description: null
+            },
+            reloadTimeSeconds: {
+                title: "เวลาในการเติมกระสุนอาวุธ",
+                description: null
+            },
+            firstBulletAccuracy: {
+                title: "ความแม่นยำของกระสุนแรก",
+                description: null
+            },
+            wallPenetration: {
+                title: "ความเจาะกำแพงของกระสุน",
+                description: null
+            }
+        },
+        trTR: {
+            displayName: {
+                title: "Ad",
+                description: null,
+            },
+            category: {
+                title: "Kategori",
+                description: null,
+            },
+            cost: {
+                title: "Maliyet",
+                description: null
+            },
+            weaponStats: {
+                title: "İstatistikler",
+                description: null
+            },
+            fireRate: {
+                title: "Ateş Hızı",
+                description: null
+            },
+            magazineSize: {
+                title: "Şarjör Boyutu",
+                description: null,
+            },
+            equipTimeSeconds: {
+                title: "Silahı Hazırlama Süresi",
+                description: null
+            },
+            reloadTimeSeconds: {
+                title: "Silahı Yeniden Doldurma Süresi",
+                description: null
+            },
+            firstBulletAccuracy: {
+                title: "İlk Mermi Hassasiyeti",
+                description: null
+            },
+            wallPenetration: {
+                title: "Duvar Penetrasyonu",
+                description: null
+            }
+        },
+        viVN: {
+            displayName: {
+                title: "Tên",
+                description: null,
+            },
+            category: {
+                title: "Danh Mục",
+                description: null,
+            },
+            cost: {
+                title: "Giá",
+                description: null
+            },
+            weaponStats: {
+                title: "Thống Kê",
+                description: null
+            },
+            fireRate: {
+                title: "Tốc Độ Bắn",
+                description: null
+            },
+            magazineSize: {
+                title: "Kích Thước Ảnh Đạn",
+                description: null,
+            },
+            equipTimeSeconds: {
+                title: "Thời Gian Trang Bị Vũ Khí",
+                description: null
+            },
+            reloadTimeSeconds: {
+                title: "Thời Gian Nạp Lại Vũ Khí",
+                description: null
+            },
+            firstBulletAccuracy: {
+                title: "Độ Chính Xác Đạn Đầu Tiên",
+                description: null
+            },
+            wallPenetration: {
+                title: "Xâm Nhập Tường",
+                description: null
+            }
+        },
+        zhCN: {
+            displayName: {
+                title: "名称",
+                description: null,
+            },
+            category: {
+                title: "类别",
+                description: null,
+            },
+            cost: {
+                title: "费用",
+                description: null
+            },
+            weaponStats: {
+                title: "统计数据",
+                description: null
+            },
+            fireRate: {
+                title: "射速",
+                description: null
+            },
+            magazineSize: {
+                title: "弹夹容量",
+                description: null,
+            },
+            equipTimeSeconds: {
+                title: "武器装备时间",
+                description: null
+            },
+            reloadTimeSeconds: {
+                title: "武器重新装填时间",
+                description: null
+            },
+            firstBulletAccuracy: {
+                title: "首发精度",
+                description: null
+            },
+            wallPenetration: {
+                title: "子弹穿透",
+                description: null
+            }
+        },
+        zhTW: {
+            displayName: {
+                title: "名稱",
+                description: null,
+            },
+            category: {
+                title: "類別",
+                description: null,
+            },
+            cost: {
+                title: "成本",
+                description: null
+            },
+            weaponStats: {
+                title: "統計資料",
+                description: null
+            },
+            fireRate: {
+                title: "射速",
+                description: null
+            },
+            magazineSize: {
+                title: "彈夾容量",
+                description: null,
+            },
+            equipTimeSeconds: {
+                title: "武器裝備時間",
+                description: null
+            },
+            reloadTimeSeconds: {
+                title: "武器重新裝填時間",
+                description: null
+            },
+            firstBulletAccuracy: {
+                title: "首發精度",
+                description: null
+            },
+            wallPenetration: {
+                title: "子彈穿透",
+                description: null
+            }
+        },
+        
+    }
 };

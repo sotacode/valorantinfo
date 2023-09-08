@@ -9,7 +9,7 @@ import { Card, CardBody, CardFooter, Image } from '@nextui-org/react';
 export const WeaponMarquee: FC<DetailWeaponProps> = ({ weapon }) => {
     return (
         <div className="max-w-screen-xl mx-auto">
-            <Marquee gradient gradientWidth={100} gradientColor={[0, 0, 0]} style={{ pointerEvents: "none" }} className="z-10 relative">
+            <Marquee gradient gradientWidth={100} gradientColor={[0, 0, 0]} style={{ pointerEvents: "none" }} className="z-10">
                 <div className="flex">
                     {
                         weapon.skins.map((skin, index) => {
