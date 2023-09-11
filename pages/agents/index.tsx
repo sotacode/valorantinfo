@@ -74,7 +74,7 @@ export default function Agents() {
         :
         <div className=''>
           <div className='absolute flex items-center justify-center w-[50px] h-[50px]'>
-            <PiArrowFatLeftFill onClick={handleBackToAgents} className='absolute group text-3xl hover:text-4xl z-30 hover:transition-all'/>
+            <PiArrowFatLeftFill onClick={handleBackToAgents} className='absolute group text-3xl hover:text-4xl z-30 hover:transition-all hover:cursor-pointer'/>
           </div>
           {selectedAgent && <DetailAgent agent={selectedAgent} />}
         </div>

@@ -21,7 +21,7 @@ export const WeaponMarquee: FC<DetailWeaponProps> = ({ weapon }) => {
                                                 shadow="none"
                                                 alt={skin.displayName}
                                                 className="h-[100px] object-cover"
-                                                src={skin.displayIcon ? skin.displayIcon : ""}
+                                                src={skin.chromas[0].fullRender ? skin.chromas[0].fullRender : ""}
                                             />
                                         </CardBody>
                                     </Card>)

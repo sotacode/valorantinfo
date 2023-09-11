@@ -100,7 +100,7 @@ const AudioAgent: React.FC<AudioAgentProps> = ({ initialAudioUrl }) => {
         <div className="flex w-full items-center justify-center">
           <Button
             isIconOnly
-            className="w-auto h-auto data-[hover]:bg-foreground/10"
+            className="w-auto h-auto data-[hover]:bg-foreground/10 hover:cursor-pointer"
             radius="full"
             variant="light"
             onClick={handlePlayAudio}

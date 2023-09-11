@@ -210,7 +210,7 @@ export default function Weapons() {
             </div>
             <div className="w-full flex items-center mt-4">
               <div className='absolute w-[50px] h-[50px]'>
-                <PiArrowFatLeftFill onClick={handleBackToWeapons} className='absolute group text-3xl hover:text-4xl z-30 hover:transition-all' />
+                <PiArrowFatLeftFill onClick={handleBackToWeapons} className='absolute group text-3xl hover:text-4xl z-30 hover:transition-all hover:cursor-pointer' />
               </div>
               <h1 className="mx-auto text-bold text-5xl">{selectedWeapon.displayName}</h1>
             </div>

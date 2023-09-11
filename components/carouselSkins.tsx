@@ -39,7 +39,7 @@ export const CarouselSkins: React.FC<CarouselSkinsProps> = ({ skins }) => {
           <div key={skin.uuid} className='h-[400px]'>
             <img
               className='object-cover'
-              src={skin.displayIcon ? skin.displayIcon : ""}
+              src={skin.chromas[0].fullRender ? skin.chromas[0].fullRender : ""}
               alt={skin.displayName}
               style={{
                 width: '100%',
@@ -47,7 +47,7 @@ export const CarouselSkins: React.FC<CarouselSkinsProps> = ({ skins }) => {
                 objectFit: 'contain', // Esto mantiene la proporción y contiene la imagen
               }}
             />
-            <p className='absolute inset-0' onClick={() => handleClickSkin(skin)}></p>
+            <p className='absolute inset-0 hover:cursor-pointer' onClick={() => handleClickSkin(skin)} ></p>
           </div>
         ))}
       </Carousel>

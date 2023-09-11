@@ -1,5 +1,4 @@
 import { Chroma } from '@/types/weapons';
-import { useDisclosure } from '@nextui-org/react';
 import React from 'react';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
@@ -9,10 +8,9 @@ interface CarouselChromasProps {
 }
 
 export const CarouselChromas: React.FC<CarouselChromasProps> = ({ chromas }) => {
-  const { isOpen, onOpen, onOpenChange } = useDisclosure();
 
   return (
-    <div className="carousel-container">
+    <div className="carousel-container w-[300px] sm:w-full">
       <Carousel
         showArrows={true}
         showStatus={false} // Oculta los puntos indicadores
