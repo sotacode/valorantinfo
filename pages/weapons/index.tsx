@@ -205,7 +205,7 @@ export default function Weapons() {
           </div>
           :
           <div className="w-full">
-            <div className="weaponcarousel w-full max-w-screen-xl mx-auto w-[310px] sm:w-[400px] md:[600px]">
+            <div className="weaponcarousel w-[300px] max-w-screen-xl mx-auto md:w-[600px] lg:w-[800px] xl:w-[1100px]">
               <WeaponMarquee weapon={selectedWeapon}/>
             </div>
             <div className="w-full flex items-center mt-4">
