@@ -28,6 +28,22 @@ export const weaponsINFO = {
 
     detailWeaponsTexts: {
         esES: {
+            columnatribute: {
+                title: "Atributo",
+                description: null
+            },
+            columnvalue: {
+                title: "Valor",
+                description: null
+            },
+            columnunit: {
+                title: "Unidad",
+                description: null
+            },
+            titleSkin: {
+                title: "Aspectos",
+                description: null
+            },
             displayName: {
                 title: "Nombre",
                 description: null,
@@ -70,6 +86,22 @@ export const weaponsINFO = {
             }
         },
         enUS: {
+            columnatribute: {
+                title: "Atributo",
+                description: null
+            },
+            columnvalue: {
+                title: "Valor",
+                description: null
+            },
+            columnunit: {
+                title: "Unidad",
+                description: null
+            },
+            titleSkin: {
+                title: "Aspectos",
+                description: null
+            },
             displayName: {
                 title: "Name",
                 description: null,
@@ -112,6 +144,22 @@ export const weaponsINFO = {
             }
         },
         arAE: {
+            columnatribute: {
+                title: "Atributo",
+                description: null
+            },
+            columnvalue: {
+                title: "Valor",
+                description: null
+            },
+            columnunit: {
+                title: "Unidad",
+                description: null
+            },
+            titleSkin: {
+                title: "Aspectos",
+                description: null
+            },
             displayName: {
                 title: "الاسم",
                 description: null,
@@ -154,6 +202,22 @@ export const weaponsINFO = {
             }
         },
         deDE: {
+            columnatribute: {
+                title: "Atributo",
+                description: null
+            },
+            columnvalue: {
+                title: "Valor",
+                description: null
+            },
+            columnunit: {
+                title: "Unidad",
+                description: null
+            },
+            titleSkin: {
+                title: "Aspectos",
+                description: null
+            },
             displayName: {
                 title: "Name",
                 description: null,
@@ -196,6 +260,22 @@ export const weaponsINFO = {
             }
         },
         esMX: {
+            columnatribute: {
+                title: "Atributo",
+                description: null
+            },
+            columnvalue: {
+                title: "Valor",
+                description: null
+            },
+            columnunit: {
+                title: "Unidad",
+                description: null
+            },
+            titleSkin: {
+                title: "Aspectos",
+                description: null
+            },
             displayName: {
                 title: "Nombre",
                 description: null,
@@ -238,6 +318,22 @@ export const weaponsINFO = {
             }
         },
         frFR: {
+            columnatribute: {
+                title: "Atributo",
+                description: null
+            },
+            columnvalue: {
+                title: "Valor",
+                description: null
+            },
+            columnunit: {
+                title: "Unidad",
+                description: null
+            },
+            titleSkin: {
+                title: "Aspectos",
+                description: null
+            },
             displayName: {
                 title: "Nom",
                 description: null,
@@ -280,6 +376,22 @@ export const weaponsINFO = {
             }
         },
         idID: {
+            columnatribute: {
+                title: "Atributo",
+                description: null
+            },
+            columnvalue: {
+                title: "Valor",
+                description: null
+            },
+            columnunit: {
+                title: "Unidad",
+                description: null
+            },
+            titleSkin: {
+                title: "Aspectos",
+                description: null
+            },
             displayName: {
                 title: "Nama",
                 description: null,
@@ -322,6 +434,22 @@ export const weaponsINFO = {
             }
         },
         itIT: {
+            columnatribute: {
+                title: "Atributo",
+                description: null
+            },
+            columnvalue: {
+                title: "Valor",
+                description: null
+            },
+            columnunit: {
+                title: "Unidad",
+                description: null
+            },
+            titleSkin: {
+                title: "Aspectos",
+                description: null
+            },
             displayName: {
                 title: "Nome",
                 description: null,
@@ -364,6 +492,22 @@ export const weaponsINFO = {
             }
         },
         jaJP: {
+            columnatribute: {
+                title: "Atributo",
+                description: null
+            },
+            columnvalue: {
+                title: "Valor",
+                description: null
+            },
+            columnunit: {
+                title: "Unidad",
+                description: null
+            },
+            titleSkin: {
+                title: "Aspectos",
+                description: null
+            },
             displayName: {
                 title: "名前",
                 description: null,
@@ -406,6 +550,22 @@ export const weaponsINFO = {
             }
         },
         koKR: {
+            columnatribute: {
+                title: "Atributo",
+                description: null
+            },
+            columnvalue: {
+                title: "Valor",
+                description: null
+            },
+            columnunit: {
+                title: "Unidad",
+                description: null
+            },
+            titleSkin: {
+                title: "Aspectos",
+                description: null
+            },
             displayName: {
                 title: "이름",
                 description: null,
@@ -448,6 +608,22 @@ export const weaponsINFO = {
             }
         },
         plPL: {
+            columnatribute: {
+                title: "Atributo",
+                description: null
+            },
+            columnvalue: {
+                title: "Valor",
+                description: null
+            },
+            columnunit: {
+                title: "Unidad",
+                description: null
+            },
+            titleSkin: {
+                title: "Aspectos",
+                description: null
+            },
             displayName: {
                 title: "Nazwa",
                 description: null,
@@ -490,6 +666,22 @@ export const weaponsINFO = {
             }
         },
         ptBR: {
+            columnatribute: {
+                title: "Atributo",
+                description: null
+            },
+            columnvalue: {
+                title: "Valor",
+                description: null
+            },
+            columnunit: {
+                title: "Unidad",
+                description: null
+            },
+            titleSkin: {
+                title: "Aspectos",
+                description: null
+            },
             displayName: {
                 title: "Nome",
                 description: null,
@@ -532,6 +724,22 @@ export const weaponsINFO = {
             }
         },
         ruRU: {
+            columnatribute: {
+                title: "Atributo",
+                description: null
+            },
+            columnvalue: {
+                title: "Valor",
+                description: null
+            },
+            columnunit: {
+                title: "Unidad",
+                description: null
+            },
+            titleSkin: {
+                title: "Aspectos",
+                description: null
+            },
             displayName: {
                 title: "Название",
                 description: null,
@@ -574,6 +782,22 @@ export const weaponsINFO = {
             }
         },
         thTH: {
+            columnatribute: {
+                title: "Atributo",
+                description: null
+            },
+            columnvalue: {
+                title: "Valor",
+                description: null
+            },
+            columnunit: {
+                title: "Unidad",
+                description: null
+            },
+            titleSkin: {
+                title: "Aspectos",
+                description: null
+            },
             displayName: {
                 title: "ชื่อ",
                 description: null,
@@ -616,6 +840,22 @@ export const weaponsINFO = {
             }
         },
         trTR: {
+            columnatribute: {
+                title: "Atributo",
+                description: null
+            },
+            columnvalue: {
+                title: "Valor",
+                description: null
+            },
+            columnunit: {
+                title: "Unidad",
+                description: null
+            },
+            titleSkin: {
+                title: "Aspectos",
+                description: null
+            },
             displayName: {
                 title: "Ad",
                 description: null,
@@ -658,6 +898,22 @@ export const weaponsINFO = {
             }
         },
         viVN: {
+            columnatribute: {
+                title: "Atributo",
+                description: null
+            },
+            columnvalue: {
+                title: "Valor",
+                description: null
+            },
+            columnunit: {
+                title: "Unidad",
+                description: null
+            },
+            titleSkin: {
+                title: "Aspectos",
+                description: null
+            },
             displayName: {
                 title: "Tên",
                 description: null,
@@ -700,6 +956,22 @@ export const weaponsINFO = {
             }
         },
         zhCN: {
+            columnatribute: {
+                title: "Atributo",
+                description: null
+            },
+            columnvalue: {
+                title: "Valor",
+                description: null
+            },
+            columnunit: {
+                title: "Unidad",
+                description: null
+            },
+            titleSkin: {
+                title: "Aspectos",
+                description: null
+            },
             displayName: {
                 title: "名称",
                 description: null,
@@ -742,6 +1014,22 @@ export const weaponsINFO = {
             }
         },
         zhTW: {
+            columnatribute: {
+                title: "Atributo",
+                description: null
+            },
+            columnvalue: {
+                title: "Valor",
+                description: null
+            },
+            columnunit: {
+                title: "Unidad",
+                description: null
+            },
+            titleSkin: {
+                title: "Aspectos",
+                description: null
+            },
             displayName: {
                 title: "名稱",
                 description: null,

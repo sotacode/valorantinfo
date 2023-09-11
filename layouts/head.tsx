@@ -15,9 +15,6 @@ export const Head = () => {
 				name="viewport"
 			/>
 			<link href="/logoico.png" rel="icon" />
-			<script
-				type="text/javascript"
-				src="../node_modules/tw-elements/dist/js/tw-elements.umd.min.js"></script>
 
 
 		</NextHead>
