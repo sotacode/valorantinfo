@@ -8,7 +8,7 @@ type SitesMapProps = {
 
 const SitesMap: React.FC<SitesMapProps> = ({ map }) => {
     return (
-        <div className='grid grid-cols-1 lg:grid-cols-2 flex flex-col items-center justify-center h-full'>
+        <div className='gap-6 grid grid-cols-1 lg:grid-cols-2 flex flex-col items-center justify-center h-full'>
             <div className='w-[280px] xs:w-[400px] md:w-[420px] lg:w-full flex mx-auto'>
                 <img src={map.displayIcon ? map.displayIcon : ""} alt="Mapa de Valorant" className="max-h-[700px]" />
             </div>
