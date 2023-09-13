@@ -65,7 +65,7 @@ export const CarouselLevels: React.FC<CarouselLevelsProps> = ({ levels }) => {
                     if (level.streamedVideo) {
                         return (
                             <div key={level.uuid} className="px-10 z-24 flex flex-col items-center justify-center">
-                                <video controls ref={(el) => el && (videoRefs.current[index] = el)}>
+                                <video controls ref={(el) => el && (videoRefs.current[index] = el)} className='max-h-[500px]'>
                                     <source src={level.streamedVideo} type="video/mp4" />
                                 </video>
                                 {videoReady ?

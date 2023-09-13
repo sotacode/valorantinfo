@@ -29,7 +29,7 @@ export default function Cards() {
   }, [language]);
   return (
     <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10 max-w-screen-2xl">
-      <div className="gap-2 grid grid-cols-2 sm:grid-cols-4 xl:grid-cols-5">
+      <div className="gap-2 grid grid-cols-3 sm:grid-cols-5 lg:grid-cols-3 xl:grid-cols-4">
         {cards.map((card, index) => (
           <Card shadow="sm" key={index} className='m-4'>
             <CardBody className="overflow-visible p-0">

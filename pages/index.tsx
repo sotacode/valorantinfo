@@ -31,7 +31,7 @@ export default function IndexPage() {
 					<source src="/videos/gekkobg.mp4" type="video/mp4" />
 				</video>
 				<div className="w-screen flex items-center justify-center z-20">
-					<div className="text-white text-center backdrop-blur-sm p-10">
+					<div className="text-white text-center backdrop-blur-sm mt-10">
 						<div className="inline-block max-w-3xl text-center justify-center">
 							<h1 className={title({ color: "violet" })} style={{ fontFamily: "ValorantFont" }}>INFO VALORANT&nbsp;</h1>
 							<br />

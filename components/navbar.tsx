@@ -99,11 +99,6 @@ export const Navbar = () => {
 							{navItems.cards[ctxLanguage]}
 						</Link>
 					</NavbarItem>
-					<NavbarItem isActive={pathActual == "/tiers" ? true : false}>
-						<Link color={pathActual == "/tiers" ? "secondary" : "foreground"} href="/tiers">
-							{navItems.tiers[ctxLanguage]}
-						</Link>
-					</NavbarItem>
 					<NavbarItem isActive={pathActual == "/about" ? true : false}>
 						<Link color={pathActual == "/about" ? "secondary" : "foreground"} href="/about">
 							{navItems.about[ctxLanguage]}
@@ -191,11 +186,6 @@ export const Navbar = () => {
 					<NavbarMenuItem>
 						<Link href="/cards" color={pathActual == "/cards" ? "secondary" : "foreground"}>
 							{navItems.cards[ctxLanguage]}
-						</Link>
-					</NavbarMenuItem>
-					<NavbarMenuItem>
-						<Link color={pathActual == "/tiers" ? "secondary" : "foreground"} href="/tiers">
-							{navItems.tiers[ctxLanguage]}
 						</Link>
 					</NavbarMenuItem>
 					<NavbarMenuItem>
