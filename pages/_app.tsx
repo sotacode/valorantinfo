@@ -7,6 +7,7 @@ import DefaultLayout from "@/layouts/default";
 import LanguageProvider from "@/context/language/LanguageProvider";
 import { useEffect } from "react";
 import { setLocalStorageLanguage } from "@/utils/localStorage";
+import { Analytics } from '@vercel/analytics/react';
 
 export default function App({ Component, pageProps }: AppProps) {
 	
@@ -17,6 +18,7 @@ export default function App({ Component, pageProps }: AppProps) {
 				<NextThemesProvider >
 					<DefaultLayout >
 						<Component {...pageProps} />
+						<Analytics />
 					</DefaultLayout>
 				</NextThemesProvider>
 			</NextUIProvider>

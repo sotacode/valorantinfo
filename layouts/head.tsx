@@ -2,6 +2,7 @@ import React from "react";
 import NextHead from "next/head";
 import { siteConfig } from "@/config/site";
 
+
 export const Head = () => {
 	return (
 		<NextHead>
@@ -15,8 +16,6 @@ export const Head = () => {
 				name="viewport"
 			/>
 			<link href="/logoico.png" rel="icon" />
-
-
 		</NextHead>
 	);
 };
