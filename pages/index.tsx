@@ -1,16 +1,7 @@
-import NextLink from "next/link";
 import { Link } from "@nextui-org/link";
-import { Snippet } from "@nextui-org/snippet";
-import { Code } from "@nextui-org/code";
-import { button as buttonStyles } from "@nextui-org/theme";
 import { siteConfig } from "@/config/site";
 import { title, subtitle } from "@/components/primitives";
-import { GithubIcon } from "@/components/icons";
-import DefaultLayout from "@/layouts/default";
-import CarouselComponent from "@/components/carousel";
 import { useContext, useState } from "react";
-
-import { SiteConfig } from "@/config/site";
 import { LanguageContext } from "@/context/language/LanguageContext";
 
 export default function IndexPage() {
@@ -25,13 +16,12 @@ export default function IndexPage() {
 
 	return (
 		<section className="flex flex-col items-center justify-center gap-4">
-
 			<div>
-				<video autoPlay muted loop className="absolute w-screen h-screen object-cover opacity-30" onLoadedData={handleVideoLoad}>
+				<video autoPlay muted loop className="absolute w-screen h-[calc(100vh-64px)] object-cover opacity-30 overflow-hidden" onLoadedData={handleVideoLoad}>
 					<source src="/videos/gekkobg.mp4" type="video/mp4" />
 				</video>
-				<div className="w-screen flex items-center justify-center z-20">
-					<div className="text-white text-center backdrop-blur-sm mt-10">
+				<div className="w-screen h-[calc(100vh-128px)] flex items-center justify-center z-20">
+					<div className="text-white text-center backdrop-blur-sm">
 						<div className="inline-block max-w-3xl text-center justify-center">
 							<h1 className={title({ color: "violet" })} style={{ fontFamily: "ValorantFont" }}>INFO VALORANT&nbsp;</h1>
 							<br />
@@ -46,8 +36,7 @@ export default function IndexPage() {
 								{homedisplay.fifth[language]}
 							</h4>
 						</div>
-
-						<CarouselComponent />
+						{/* <CarouselComponent /> */}
 					</div>
 				</div>
 			</div>

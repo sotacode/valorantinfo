@@ -18,7 +18,8 @@ export default function Cards() {
           throw new Error('No se pudo obtener la información');
         }
         const data = await response.json();
-        setCards(data.data);
+        const first100Cards = data.data.slice(0, 100);
+        setCards(first100Cards);
 
       } catch (error) {
         console.error('Error al obtener datos:', error);

@@ -42,47 +42,28 @@ export default function GridMaps() {
 
     return (
         <>
-            <h1 className="w-full text-center text-4xl text-bold mb-10">Competitive Maps</h1>
-            <div className="gap-4 grid grid-cols-1 lg:grid-cols-2">
-                {competitiveMaps.map((item, index) => (
-                    <Card shadow="sm" key={index} isPressable onPress={() => handleSelectedCard(item)}>
-                        <CardBody className="overflow-visible p-0">
-                            <Image
-                                shadow="sm"
-                                radius="lg"
-                                width="100%"
-                                alt={item.displayName}
-                                className="w-full object-cover max-h-[350px]"
-                                src={item.splash}
-                            />
-                        </CardBody>
-                        <CardFooter className="justify-center">
-                            <b className="text-bold text-2xl">{item.displayName}</b>
-                            {/* <p className="text-default-500">{item.tacticalDescription}</p> */}
-                        </CardFooter>
-                    </Card>
-                ))}
-            </div>
-
-            <Divider className="my-10"/>
-
-            <h1 className="w-full text-center text-4xl text-bold my-10">Other Maps</h1>
             <div className="gap-4 grid grid-cols-1 lg:grid-cols-2">
                 {otherMaps.map((item, index) => (
                     <Card shadow="sm" key={index} isPressable onPress={() => handleSelectedCard(item)}>
-                        <CardBody className="overflow-visible p-0">
+                        <CardBody className="overflow-visible p-0 relative">
+                            <div className="absolute inset-0 bg-violet-500/20 animate-pulse" />
                             <Image
                                 shadow="sm"
                                 radius="lg"
                                 width="100%"
                                 alt={item.displayName}
-                                className="w-full object-cover max-h-[350px]"
+                                className="w-full object-cover max-h-[350px] opacity-0 transition-opacity duration-300"
                                 src={item.splash}
+                                onLoad={(e) => {
+                                    const target = e.target as HTMLImageElement;
+                                    target.classList.remove('opacity-0');
+                                    target.classList.add('opacity-100');
+                                    target.previousElementSibling?.remove();
+                                }}
                             />
                         </CardBody>
                         <CardFooter className="text-small justify-between">
                             <b>{item.displayName}</b>
-                            {/* <p className="text-default-500">{item.tacticalDescription}</p> */}
                         </CardFooter>
                     </Card>
                 ))}

@@ -23,13 +23,17 @@ export default function DefaultLayout({
 		{
 			show ?
 				<>
-					<div className="relative flex flex-col">
+					<div className="relative flex flex-col min-h-screen">
 						<Head />
-						<Navbar />
-						<main className="container mx-auto max-w-7xl flex-grow">
+						<div className="h-[64px]"> {/* Fixed height for Navbar */}
+							<Navbar />
+						</div>
+						<main className="container mx-auto max-w-7xl flex-grow min-h-[calc(100vh-128px)]">
 							{children}
 						</main>
-						<Footer />
+						<div className="mt-auto h-[64px]"> {/* Footer will stick to bottom */}
+							<Footer />
+						</div>
 					</div>
 				</>
 				:

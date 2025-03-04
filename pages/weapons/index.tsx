@@ -3,16 +3,18 @@ import { DetailWeapon } from "@/components/detailWeapon";
 import { WeaponMarquee } from "@/components/weaponMarquee";
 import { WeaponsPriorityProps, weaponsINFO } from "@/config/weapons";
 import { LanguageContext } from "@/context/language/LanguageContext"
-import { Weapon, Weapons } from "@/types/weapons"
+import { Weapon } from "@/types/weapons"
 import { insertCharAtIndex } from "@/utils/common";
 import { Card, Image } from "@nextui-org/react";
-import { useContext, useEffect, useState } from "react"
+import { AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
+import { Suspense, useContext, useEffect, useState } from "react"
 import { PiArrowFatLeftFill } from "react-icons/pi";
 
 
 
 
-export default function Weapons() {
+export default function WeaponsPage() {
   const { weaponsPriority } = weaponsINFO;
   const { language } = useContext(LanguageContext);
   const [weapons, setWeapons] = useState<Weapon[] | undefined>();
@@ -121,87 +123,123 @@ export default function Weapons() {
       {
         !showDetailWeapon || !selectedWeapon ?
           <div className="flex flex-col items-center justify-center gap-3">
-            <div className="flex grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4">
-              <div className="col-span-1 p-3">
-                <div className=" p-2">
-                  {
-                    filterSidearm?.map((weapon: Weapon) => {
-                      return <div key={weapon.uuid}>
-                        <CardWeapon weapon={weapon} handleSelectedWeapon={handleSelectedWeapon} />
+            <AnimatePresence mode="wait">
+              <Suspense fallback={
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  className="flex items-center justify-center h-[500px]"
+                >
+                  <motion.svg 
+                    className="animate-spin h-32 w-32" 
+                    viewBox="0 0 24 24"
+                  >
+                    <circle 
+                      className="opacity-25" 
+                      cx="12" 
+                      cy="12" 
+                      r="10" 
+                      stroke="currentColor" 
+                      strokeWidth="4"
+                      fill="none"
+                    />
+                    <path
+                      className="opacity-75"
+                      fill="currentColor"
+                      d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                    />
+                  </motion.svg>
+                </motion.div>
+              }>
+                <motion.div 
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.5 }}
+                  className="flex grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4"
+                >
+                  <div className="col-span-1 p-3">
+                    <div className=" p-2">
+                      {
+                        filterSidearm?.map((weapon: Weapon) => {
+                          return <div key={weapon.uuid}>
+                            <CardWeapon weapon={weapon} handleSelectedWeapon={handleSelectedWeapon} />
+                          </div>
+                        })
+                      }
+                    </div>
+                  </div>
+
+                  <div className="col-span-1 p-3">
+                    <div className="p-2">
+                      <div className=" my-3">
+                        {
+                          filterSMG?.map((weapon: Weapon) => {
+                            return <div key={weapon.uuid}>
+                              <CardWeapon weapon={weapon} handleSelectedWeapon={handleSelectedWeapon} />
+                            </div>
+                          })
+                        }
                       </div>
-                    })
-                  }
-                </div>
-              </div>
-
-              <div className="col-span-1 p-3">
-                <div className="p-2">
-                  <div className=" my-3">
-                    {
-                      filterSMG?.map((weapon: Weapon) => {
-                        return <div key={weapon.uuid}>
-                          <CardWeapon weapon={weapon} handleSelectedWeapon={handleSelectedWeapon} />
-                        </div>
-                      })
-                    }
+                      <div className=" my-3">
+                        {
+                          filterShotgun?.map((weapon: Weapon) => {
+                            return <div key={weapon.uuid}>
+                              <CardWeapon weapon={weapon} handleSelectedWeapon={handleSelectedWeapon} />
+                            </div>
+                          })
+                        }
+                      </div>
+                    </div>
                   </div>
-                  <div className=" my-3">
-                    {
-                      filterShotgun?.map((weapon: Weapon) => {
-                        return <div key={weapon.uuid}>
-                          <CardWeapon weapon={weapon} handleSelectedWeapon={handleSelectedWeapon} />
-                        </div>
-                      })
-                    }
+                  <div className="col-span-1 p-3">
+                    <div className="p-2">
+                      <div className="my-3">
+                        {
+                          filterRifle?.map((weapon: Weapon) => {
+                            return <div key={weapon.uuid}>
+                              <CardWeapon weapon={weapon} handleSelectedWeapon={handleSelectedWeapon} />
+                            </div>
+                          })
+                        }
+                      </div>
+                      <div className="my-3">
+                        {
+                          filterMelee?.map((weapon: Weapon) => {
+                            return <div key={weapon.uuid}>
+                              <CardWeapon weapon={weapon} handleSelectedWeapon={handleSelectedWeapon} />
+                            </div>
+                          })
+                        }
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </div>
-              <div className="col-span-1 p-3">
-                <div className="p-2">
-                  <div className="my-3">
-                    {
-                      filterRifle?.map((weapon: Weapon) => {
-                        return <div key={weapon.uuid}>
-                          <CardWeapon weapon={weapon} handleSelectedWeapon={handleSelectedWeapon} />
-                        </div>
-                      })
-                    }
+                  <div className="col-span-1 p-3">
+                    <div className="p-2">
+                      <div className="my-3">
+                        {
+                          filterSniper?.map((weapon: Weapon) => {
+                            return <div key={weapon.uuid}>
+                              <CardWeapon weapon={weapon} handleSelectedWeapon={handleSelectedWeapon} />
+                            </div>
+                          })
+                        }
+                      </div>
+                      <div className="my-3">
+                        {
+                          filterHeavy?.map((weapon: Weapon) => {
+                            return <div key={weapon.uuid}>
+                              <CardWeapon weapon={weapon} handleSelectedWeapon={handleSelectedWeapon} />
+                            </div>
+                          })
+                        }
+                      </div>
+                    </div>
                   </div>
-                  <div className="my-3">
-                    {
-                      filterMelee?.map((weapon: Weapon) => {
-                        return <div key={weapon.uuid}>
-                          <CardWeapon weapon={weapon} handleSelectedWeapon={handleSelectedWeapon} />
-                        </div>
-                      })
-                    }
-                  </div>
-                </div>
-              </div>
-              <div className="col-span-1 p-3">
-                <div className="p-2">
-                  <div className="my-3">
-                    {
-                      filterSniper?.map((weapon: Weapon) => {
-                        return <div key={weapon.uuid}>
-                          <CardWeapon weapon={weapon} handleSelectedWeapon={handleSelectedWeapon} />
-                        </div>
-                      })
-                    }
-                  </div>
-                  <div className="my-3">
-                    {
-                      filterHeavy?.map((weapon: Weapon) => {
-                        return <div key={weapon.uuid}>
-                          <CardWeapon weapon={weapon} handleSelectedWeapon={handleSelectedWeapon} />
-                        </div>
-                      })
-                    }
-                  </div>
-                </div>
-              </div>
-            </div>
-
+                </motion.div>
+              </Suspense>
+            </AnimatePresence>
           </div>
           :
           <div className="w-full">

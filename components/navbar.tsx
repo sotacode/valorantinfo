@@ -99,11 +99,6 @@ export const Navbar = () => {
 							{navItems.cards[ctxLanguage]}
 						</Link>
 					</NavbarItem>
-					<NavbarItem isActive={pathActual == "/about" ? true : false}>
-						<Link color={pathActual == "/about" ? "secondary" : "foreground"} href="/about">
-							{navItems.about[ctxLanguage]}
-						</Link>
-					</NavbarItem>
 				</NavbarContent>
 				<NavbarContent justify="end" className="hidden lg:flex">
 					<NavbarBrand className="flex justify-end">
